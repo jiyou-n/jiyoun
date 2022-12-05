@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../03 Html5&CSS/css/all.css">
+    <title>Document</title>
+    <style>
+        .fa-solid {
+            font-size: 150px;
+            cursor: pointer;
+        }
+        .fa-solid:hover {
+            color: #ccc;
+        }
+    </style>
+    <script>
+        
+        function myfnc () {
+            let icon = document.getElementsByClassName("fa-thumbs-down")[0].classList;
+            icon.toggle("fa-thumbs-up")
+        }
+    </script>
+</head>
+<body>
+    <i onclick="myfnc()" class="fa-solid fa-thumbs-down"></i>
+</body>
+</html>

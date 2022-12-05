@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // const eprson = {first:"choi", last:"jiyun"}
+        const person = {
+            firstName : "choi",
+            lastName : "jiyun",
+            age : 23,
+            fullName : function() {
+                return this.firstName + " "+this.lastName;
+            }
+        };
+        // let firstName = "choi";
+        // let lastName = "jiyun"
+        // let age = 23;
+        // let fullname = this.firstName+this.lastName;
+        document.write(person.fullName()+"<br>");
+
+        const cars = {};
+        cars.model = "소형";
+        cars.price=10000;
+        cars.color = "black";
+        document.write(cars.model+"<br>");
+
+        const man = new Object();
+        man.firstName = "john";
+        man.lastName = "doe";
+        man.age = 30;
+        document.write(man.firstName + " " + man.lastName + "<br>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

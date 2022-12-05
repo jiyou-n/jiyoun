@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열</title>
+    <script>
+        let x = 123;
+        let y = "123";
+        let c = 10.554;
+        let d = "34 45 50";
+        let e = parseFloat(c);
+        document.write(typeof x + "<br>"+typeof y +"<br>"); //number;
+        document.write(x + "<br>"+y + "<br>"); //string;
+        document.write(Number("123")+"<br>"+String(123)+"<br>"); //123<br>123;
+        document.write(x + y, "<br>"); //123123;
+        document.write(x + Number(y),"<br>"); //246;
+        document.write(parseFloat(x),"<br>"); //123;
+        document.write(parseFloat(c),"<br>"); //10.554;
+        document.write(parseFloat(d), "<br>"); //34;
+        document.write(parseInt(c), "<br>"); //10;
+        document.write(typeof e, "<br>"); //number;
+        document.write(parseInt(c)+parseInt(c), "<br>"); //20;
+        document.write(String(10+10)+String(10),"<br>"); //2010;
+        document.wirte(Number("10")+Number("10"),"<br>"); //20;
+        document.write(x.toString()+x.toString()+"<br>"); //123123;
+        document.write((123).toString()+(123+10).toString()+"<br>"); //123133;
+        let a = 123000000;
+        let aa = 0.000000123;
+        let b = aa.toExponential(); //string
+        document.wirte(typeof b +"<br>"+b+"<br>"); //1.23e-7 지수형태로 나옴;
+        document.write((123.4537).toFixed(2)+"<br>") //123.45;
+        document.write((123.4537).toPrecision(7)+"<br>") //123.0000;
+    </script>
+</head>
+<body>
+</body>
+</html>
