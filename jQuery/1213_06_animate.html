@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .txt1 {
+        background: aqua;
+      }
+      .txt2 {
+        background: pink;
+      }
+    </style>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script>
+      //animate({속성}, speed, easing, callback)
+      $(function () {
+        $(".btn1").click(function () {
+          $(".txt1").animate(
+            { marginLeft: "500px", fontSize: "32px" },
+            2000,
+            "linear",
+            function () {
+              alert("미션 완료");
+            }
+          );
+        });
+        //$(".btn1").click(); 강제호출 -> click 하지 않아도 호출됨
+        // $(".btn1").trigger("click"); 강제호출
+        $(".btn2").click(function () {
+          $(".txt2").animate({ marginLeft: "+=50px" }, 2000, "linear");
+        });
+        $(".btn3").click(function () {
+          $(".txt1").animate(
+            { marginLeft: "500px", fontSize: "32px" },
+            2000,
+            "linear",
+            function () {
+              alert("미션 완료");
+            }
+          );
+          $(".txt2")
+            .delay(2000)
+            .animate({ marginLeft: "+=50px" }, 2000, "linear");
+        });
+      });
+    </script>
+  </head>
+  <div class="box"><img src="../images/photo1.jpg" alt="photo1" /></div>
+  <button class="left">slideleft</button>
+  <button class="right">slideright</button>
+  <button class="up">slideUp</button>
+  <button class="down">slideDown</button>
+</html>
