@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        $("body").append("<p>정지</p>");
+        $("body").append("<div>시작</div>");
+        let interval = setInterval(function () {
+          $("body").prepend("<p>Hello</p>");
+        }, 1000);
+        $("p").click(function () {
+          clearInterval(interval);
+        });
+        $("div").click(function () {
+          setInterval("interval");
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
