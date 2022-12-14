@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .effect {
+        background: #ccc;
+        padding: 10px;
+        border-radius: 30px;
+        margin-bottom: 20px;
+        width: 400px;
+      }
+      .effect.on {
+        background: #8ac007;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <script src="js/jquery-3.6.1.min.js"></script>
+  <script>
+    $(function () {
+      let status = true;
+      let wd = $(".effect").width();
+      $("button").click(function () {
+        if (status) {
+          $(".effect")
+            .animate({ width: "800px" }, 1000, "swing")
+            .addClass("on");
+        } else {
+          $(".effect")
+            .animate({ width: "400px" }, 1000, "swing")
+            .removeClass("on");
+        }
+        status = !status;
+      });
+    });
+  </script>
+  <body>
+    <div class="effect">
+      <h2>Animate</h2>
+      <p class="txt">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
+    </div>
+    <button>toggle effect</button>
+  </body>
+</html>
