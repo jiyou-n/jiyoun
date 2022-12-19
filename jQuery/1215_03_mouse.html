@@ -40,7 +40,7 @@
     <script>
       $(function () {
         let i = 0;
-        $(".out")
+        $(".overout")
           .mouseover(function () {
             $("p:first", this).text("mouseover");
             $("p:last", this).text(++i);
@@ -48,26 +48,25 @@
           .mouseout(function () {
             $("p:first", this).text("mouseout");
           });
-
         let n = 0;
         $(".enterleave")
-          .mouseover(function () {
-            $("p:first", this).text("mouseover");
-            $("p:last", this).text(++i);
+          .mouseenter(function () {
+            $("p:first", this).text("mouseenter");
+            $("p:last", this).text(++n);
           })
-          .mouseout(function () {
-            $("p:first", this).text("mouseout");
+          .mouseleave(function () {
+            $("p:first", this).text("mouseleave");
           });
-
-        let o = 0;
-        $(".hover")
-          .mouseover(function () {
-            $("p:first", this).text("mouseover");
-            $("p:last", this).text(++i);
-          })
-          .mouseout(function () {
-            $("p:first", this).text("mouseout");
-          });
+        let m = 0;
+        $(".hover").hover(
+          function () {
+            $("p:first", this).text("hover");
+            $("p:last", this).text(++n);
+          },
+          function () {
+            $("p:first", this).text("hover아닐때");
+          }
+        );
       });
     </script>
   </head>
